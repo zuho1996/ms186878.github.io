@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Intro Assignment</title>
+  <style>
+    body { font-family: Arial,sans-serif; background-color: #ffd; }
+    #mainDiv { width: 800px; margin: 0 auto; position: relative; }
+    button { margin: 0 0 10px 0; }
+  </style>
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous">
+    </script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("#funStuff").slideUp();
+  });
+  $("#show").click(function(){
+    $("#funStuff").slideDown();
+  });
+});
+    </script>
+    </head>
+<body>
+  <div id="mainDiv">
+    <h3>jQuery Intro Assignment</h3>
+    <div id="mainMenu">
+      <div id="buttonStuff">
+        <button id="hide">Hide</button>
+        <button id="show">Show</button>
+      </div>
+      <div id="funStuff">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ligula urna. Mauris fringilla 
+        felis eu leo gravida ullamcorper. Integer lacinia commodo accumsan. Ut velit mi, luctus condimentum 
+        tincidunt quis, suscipit non lectus. Nunc enim sapien, facilisis sed sodales dignissim, ullamcorper 
+        quis nisl. Suspendisse sit amet justo ut sapien pellentesque.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
