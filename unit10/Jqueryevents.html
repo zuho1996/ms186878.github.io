@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Events and Effects</title>
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous">
+    </script>
+<script>
+
+</script>    
+    
+</head>
+<body>
+<h2>Simple Form</h2>
+<p>Please complete the form below. Press submit when finished.</p>
+<form  id="myForm" action="http://www.frodriguez.net/PHPStuff/TestFormDataDelay.php" onsubmit="return checkForm(this);">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="Brian"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Young"><br><br>
+    
+    <button type="submit" id="myButton" value="Submit">Submit</button>
+</form> 
+
+<script>
+   
+$('#myForm').submit(function(){
+    $("#myButton", this)
+      .html("Please Wait...")
+      .attr('disabled', 'disabled');
+    return true;
+});
+   
+</script>
+    
+<!--    
+ <script type="text/javascript"> 
+     function checkForm(form) 
+  {
+ 
+
+    form.myButton.disabled = true;
+    form.myButton.value = "Please wait...";
+    return true;
+  }
+
+  function resetForm(form) 
+  {
+    form.myButton.disabled = false;
+    form.myButton.value = "Submit";
+  }
+
+</script>-->
+</body>
+</html>
