@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="Samples.css">
+  <title>Questionnaire</title>
+</head>
+
+<body>
+  <div id="mainDiv">
+    <script type="text/javascript">
+      var finalAnswer;
+      var displayName = prompt("Please enter your name?", "");
+      if ((displayName == "") || (displayName== null))
+      {
+        displayName = "You forgot your name.";
+      }
+     else
+      {
+        finalAnswer = displayName;
+      }
+      var displayJob = prompt("What is your occupation?", "");
+      if ((displayJob == "") || (displayJob== null))
+       {
+        displayJob = "You forgot your occupation.";
+      }
+     else
+      {
+        finalAnswer = displayJob;
+      }
+      var displayAddress = prompt("What is your address?", "");
+      if ((displayAddress == "") || (displayAddress== null))
+       {
+        displayAddress = "You forgot your address.";
+      }
+     else
+      {
+        finalAnswer = displayAddress;
+      }
+      do
+      {
+        document.write("Thank you for your information! You supplied this information:" + "<br/>" + "<br/>" + displayName + "<br/>"  + displayJob + "<br/>" + displayAddress);
+        finalNum--;    
+      if (isNaN(finalAnswer))
+        {
+          document.write("Oops, not enough information provided!");
+        }
+      }
+     while ( finalAnswer < null);
+   
+    </script>
+  </div>
+</body>
+</html>
